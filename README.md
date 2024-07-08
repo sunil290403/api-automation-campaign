@@ -2,6 +2,9 @@
 
 Welcome to our API testing framework that leverages RestAssured, TestNG, Maven, and Extent Report to automate API testing. This framework allows you to easily write, run, and report on your API tests, ensuring the reliability and functionality of your web services.
 
+Testplan will be available in the repository
+
+
 ## Table of Contents
 - [Prerequisites](#prerequisites)
 - [Adding Dependencies](#adding-dependencies)
