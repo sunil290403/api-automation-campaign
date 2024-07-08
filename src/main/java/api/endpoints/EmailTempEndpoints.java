@@ -6,8 +6,8 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum EmailTempEndpoints {
-    GET_RECIPIENTS("email/templates"),
-    GET_RECIPIENT_INFO("email/templates/{id}");
+    GET_ALL_EMAIL_TEMPLATES("email/templates"),
+    GET_EMAIL_TEMPLATE("email/templates/{id}");
 
     private final String path;
 }

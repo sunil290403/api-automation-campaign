@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="E2E Test Suite">
+    <test name = "marketing campaign E2E tests">
+        <classes>
+            <class name="api.tests.CampaignE2ETests"/>
+            <class name="api.tests.EmailTemplateTests"/>
+            <class name="api.tests.RecipientTests"/>
+        </classes>
+    </test>
+   <listeners>
+       <listener class-name="api.report.ExtentReportListener"/>
+    </listeners>
+</suite>

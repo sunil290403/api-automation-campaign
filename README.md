@@ -4,7 +4,6 @@ Welcome to our API testing framework that leverages RestAssured, TestNG, Maven, 
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
-- [Setting Up the Project](#setting-up-the-project)
 - [Adding Dependencies](#adding-dependencies)
 - [Writing API Tests](#writing-api-tests)
 - [Generating Extent Reports](#generating-extent-reports)
@@ -23,13 +22,6 @@ Before you get started with this project, make sure you have the following prere
 
 - **IDE**: You can use any Java IDE of your choice, such as IntelliJ IDEA or Eclipse.
 
-## Setting Up the Project
-
-To set up the project, you can use Maven to create a basic project structure:
-
-```bash
-mvn archetype:generate -DgroupId=com.yourcompany -DartifactId=api-test-framework -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
-```
 ## Open the project in your preferred IDE for further development.
 
 ## Adding Dependencies
@@ -42,12 +34,19 @@ You can write your API tests in Java using RestAssured. We've provided a sample 
 To create HTML reports for your tests, use the Extent Report library. We've included a utility class in the blog post to facilitate report generation.
 
 ## Running Tests
-
-You can run your API tests using Maven:
+You can run your E2E API tests using Maven:
 ```bash
-mvn clean test
+mvn test -Dsuite-xml=test-suite/campaign-e2e.xml
+```
+You can run your Integration API tests using Maven:
+```bash
+ mvn test -Dsuite-xml=test-suite/campaign-integration.xml
+```
+You can run your Both E2E & Integration API tests using Maven:
+```bash
+ mvn test -Dsuite-xml=test-suite/testng.xml
 ```
 
 ## Viewing Extent Reports
 
-After running your tests, you can find the Extent Report HTML file in the reports directory. Open it in your browser to view the test results.
+After running your tests, you can find the Extent Report HTML file in the test-output directory. Open it in your browser to view the test results.
